@@ -14,7 +14,7 @@ export default function Home() {
     handleResize()
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
-  }, [])
+  }, [window?.innerWidth, window?.innerHeight])
   return (
     <div className="flex items-center justify-center flex-col">
       <h1 className="text-4xl font-bold">Your screensize detector</h1>
